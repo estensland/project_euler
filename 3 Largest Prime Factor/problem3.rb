@@ -1,5 +1,3 @@
-# 600851475143
-
 def find_biggest_prime_factor(number)
   prime_factor = 2
 
