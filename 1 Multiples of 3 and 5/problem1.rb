@@ -22,3 +22,5 @@ def sum_of_multiples(numbers)
 end
 
 p get_multiples_for(1000, 3, 5)
+
+# 233168

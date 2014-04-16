@@ -16,3 +16,5 @@ while(current < 4000000) {
 sum = even_fibs.reduce(function(a,b){return a+b;});
 
 console.log(sum);
+ 
+// 4613732
