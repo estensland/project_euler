@@ -1,23 +1,17 @@
-pallindromes = []
-
 def pallindrome_finder(low, high)
   pallindromes = []
-  x = low
-
-  until x > high    
-    y = low
-  
-    until y > high
+  low.upto(high).map do |x|
+    low.upto(high).each do |y|
       z = x * y
-      z = z.to_s
-      if z == z.reverse
-        pallindromes << z.to_i  
-      end
-      y += 1
+      pallindromes << z if pallindrome?(z)
     end
-    x+=1
   end
   pallindromes
+end
+
+def pallindrome?(num)
+  num = num.to_s
+  num == num.reverse
 end
 
 def largest_pallindrome(low, high)
