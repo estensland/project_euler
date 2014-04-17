@@ -1,16 +1,18 @@
-var current = 2;
-var prev = 1;
+evenFibs = function(limit) {
+  var current = 2;
+  var prev = 1;
 
-var even_fibs = [current];
+  var evenFibs = [current];
 
-while(current < 4000000) {
-  next = current + prev;
-  
-  if (next % 2 === 0){even_fibs.push(next);}
-  prev = current;
-  current = next;
+  while(current < limit) {
+    next = current + prev;
+    
+    if (next % 2 === 0){evenFibs.push(next);}
+    prev = current;
+    current = next;
+  }
+
+  return evenFibs.reduce(function(a,b){return a+b;});
 }
 
-sum = even_fibs.reduce(function(a,b){return a+b;});
-
-console.log(sum);
+console.log(evenFibs(4000000));
