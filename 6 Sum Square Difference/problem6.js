@@ -11,6 +11,3 @@ sumSquareDifferenceUpTo = function(limit) {
 };
 
 console.log(sumSquareDifferenceUpTo(100));
-
-
-
