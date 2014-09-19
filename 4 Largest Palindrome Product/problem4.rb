@@ -6,7 +6,7 @@ def pallindrome_finder(low, high)
       pallindromes << z if pallindrome?(z)
     end
   end
-  pallindromes
+  pallindromes.sort
 end
 
 def pallindrome?(num)
