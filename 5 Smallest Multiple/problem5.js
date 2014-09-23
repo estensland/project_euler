@@ -3,7 +3,7 @@ var isDivTo = function(number, breakPoint){
   while(divisor > breakPoint/2){
     if (number % divisor !== 0) {
       return false;
-    } 
+    }
     divisor --;
   }
   return true;
