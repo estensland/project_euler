@@ -1,23 +1,22 @@
-var base = 1;
-var i = 1;
-var divisorCounter = 0
+var base = 0;
+var i = 0;
+var divisorCounter = 0;
 
-while(divisorCounter < 501) {
-  base += i
+while(divisorCounter < 500) {
   i += 1;
-  var divisor = 1
-  divisorCounter = 0
+  base += i;
+  divisorCounter = 0;
+  var divisor = 1;
   while(divisor <= Math.sqrt(base)) {
     if (base % divisor == 0) {
       if (base/divisor !== divisor){
-        divisorCounter += 2
+        divisorCounter += 2;
       }
       else{
-        divisorCounter += 1
+        divisorCounter += 1;
       }
     }
-    divisor += 1 ;
+    divisor += 1;
   }
 }
-
 console.log(base);
