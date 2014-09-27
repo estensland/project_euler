@@ -11,17 +11,16 @@ def collatz_sequence(num)
   sequence
 end
 
-start = 1_000_000
-longest = [0]
+start = 999_999
+longest = 0
 current = start
-while start > 700_000
-  start -= 1
-  result = collatz_sequence(start)
-  if result.length > longest.length
+while start > 500_000
+  start -= 2
+  result = collatz_sequence(start).length
+  if result > longest
     longest = result
     current = start
   end
 end
 
 p current
-p longest
