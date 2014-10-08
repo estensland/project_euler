@@ -9,5 +9,5 @@ def squared_sum_to(number):
     squared_sum = squared_sum + math.pow(x,2)
 
   return math.pow(regular_sum,2) - squared_sum
-  
-print squared_sum_to(100) 
+
+print squared_sum_to(100)

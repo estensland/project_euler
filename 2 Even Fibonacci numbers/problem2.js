@@ -6,7 +6,7 @@ evenFibs = function(limit) {
 
   while(current < limit) {
     next = current + prev;
-    
+
     if (next % 2 === 0){evenFibs.push(next);}
     prev = current;
     current = next;
