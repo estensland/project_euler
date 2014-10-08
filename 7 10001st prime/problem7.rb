@@ -1,8 +1,7 @@
 def prime?(number)
-  2.upto(number/2) do |i|
+  2.upto(number**0.5) do |i|
     return false if number%i == 0
-  end 
-  p number
+  end
   true
 end
 
