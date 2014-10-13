@@ -13,8 +13,7 @@ names.sort!.each_with_index do |name, index|
   name.split('').each do |letter|
     sub_score += letter_score[letter]
   end
-  sub_score *= (index + 1)
-  score += sub_score
+  score += (sub_score *= (index + 1))
 end
 
 p score
