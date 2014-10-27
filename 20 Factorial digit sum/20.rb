@@ -1,7 +1,5 @@
-class Integer
-  def !
-    (1..self).to_a.inject(&:*)
-  end
+def factorial(num)
+  (1..num).to_a.inject(&:*)
 end
 
-p 100.!.to_s.split('').map(&:to_i).inject(&:+)
+p factorial(100).to_s.split('').map(&:to_i).inject(&:+)
