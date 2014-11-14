@@ -9,27 +9,12 @@
 #  65 64 63 62 61 60 59 58 57
 
 odds = (1..1001).select(&:odd?)
-count = odds.count
-top_right = odds.map{|n| n ** 2}.inject(:+)
-
-
-bottom_right_store = 0
-
-bottom_right_store = odds.map.with_index{|n, index| (n * (index + 1)) * 2 + 1}
-
-bottom_right_store.pop
-
-bottom_right = bottom_right_store.inject(:+)
-
-bottom_left = 0
-
-(count-1).times do |i| 
-  i= i+1
-  bottom_left += 1 + (i**2 * 4)
-end
-
 evens = (1..1002).select(&:even?)
 
-top_left = bottom_right_store.map.with_index{|n, index| n + (evens[index] * 2)}.inject(:+)
+top_right = odds.map{|n| n ** 2}
 
-p bottom_left + top_left + top_right + bottom_right
+bottom_right = top_right.map.with_index{|n, index| n + (evens[index])}
+bottom_left = bottom_right.map.with_index{|n, index| n + (evens[index])}
+top_left = bottom_right.map.with_index{|n, index| n + (evens[index])}
+
+p bottom_left.inject(:+) + top_left.inject(:+) + top_right.inject(:+) + bottom_right.inject(:+)
