@@ -21,18 +21,15 @@ bottom_right_store.pop
 
 bottom_right = bottom_right_store.inject(:+)
 
-
-
 bottom_left = 0
-# Also 2**2 + 1, 4**2 + 1, 6**2 +1
-(count).times do |i| 
+
+(count-1).times do |i| 
+  i= i+1
   bottom_left += 1 + (i**2 * 4)
 end
 
 evens = (1..1002).select(&:even?)
-top_left = bottom_right_store.map.with_index{|n, index| n + evens[index]}.inject(:+)
+
+top_left = bottom_right_store.map.with_index{|n, index| n + (evens[index] * 2)}.inject(:+)
 
 p bottom_left + top_left + top_right + bottom_right
-
-# 667 920 501
-# 669 171 001
