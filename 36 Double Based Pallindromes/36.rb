@@ -7,11 +7,7 @@ def pallindrome_finder(low, high)
 end
 
 def pallindrome?(num, base = nil)
-  num = if base
-    num.to_s
-  else
-    num.to_s(2)
-  end
+  num = base ? num.to_s : num.to_s(2)
   num == num.reverse
 end
 
