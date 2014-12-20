@@ -9,6 +9,17 @@ def num_thing(num)
   }
 end
 
+
+
+def digit_place_value(num)
+  digits = num.to_s.length
+  if digits == 1
+    return 10
+  else
+    9 * digits * (10 ** digits - 1)
+  end
+end
+
 def numeral_count(count)
   if count < 10
     return count
