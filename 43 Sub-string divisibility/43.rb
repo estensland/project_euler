@@ -11,6 +11,9 @@ original.permutation.each do |pandigital|
   return unless ((d[3] * d[4] * d[5]) % 5) == 0
   return unless ((d[2] * d[3] * d[4]) % 3) == 0
   return unless ((d[1] * d[2] * d[3]) % 2) == 0
-  nums << d
+  nums << d.inject(:+)
 end
 
+nums << d.inject(:+)
+
+p nums
