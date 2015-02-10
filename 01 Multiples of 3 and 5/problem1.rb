@@ -6,7 +6,7 @@ def find_multiples(num, top)
   end
 
   results
-end 
+end
 
 def get_multiples_for(top, *numbers)
   multiples = []
