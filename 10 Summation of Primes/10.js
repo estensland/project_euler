@@ -12,7 +12,6 @@ var sum = 0;
 while (count < 2000000){
   if (primeCheck(count)) {
     sum = sum + count;
-    console.log(count)
   }
   count ++;
 }
