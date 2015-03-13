@@ -23,7 +23,6 @@ year_day_offset = 2
     day_off = day_off < 7 ? day_off : day_off - 7
     local += 1 if day_off == 0
   end
-  p [num, local]
   sundays += local
   year_day_offset += days_in_year(num) % 7
   year_day_offset = year_day_offset < 7 ? year_day_offset : year_day_offset - 7
