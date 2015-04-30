@@ -6,5 +6,25 @@ def pentanumber(num)
 end
 
 def is_pentagon_number?(num)
-  Math.sqrt((24 * num) + 1) % 1 == 0
+  top = 24 * num + 1
+  top = Math.sqrt(top) + 1
+  (top / 6) % 1 == 0
+end
+
+p_nums = []
+
+i = 1
+max = 5000
+while i < max
+  pn = pentanumber(i)
+  p_nums.each do |n|
+    if is_pentagon_number?(pn + n) && is_pentagon_number?((pn - n).abs)
+      puts (pn - n).abs
+      i = max
+      break
+    end
+  end
+
+  p_nums << pn
+  i += 1
 end
